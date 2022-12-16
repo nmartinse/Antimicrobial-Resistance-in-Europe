@@ -1,8 +1,11 @@
-\documentclass[12pt, a4paper, twoside]{article}
+\documentclass[12pt, a4paper, openany]{article}
 
 %% Preamble
 \usepackage{umatfgspanish}
 \usepackage{blindtext}
+%\usepackage{float} % Librería para presentación de imágenes
+\usepackage{biblatex}
+\usepackage{csquotes}
 
 \graphicspath{{images/}{../images/}}
 
@@ -17,6 +20,8 @@
 \clearpage
 \setcounter{page}{1}
 
+\includepdf[noautoscale=true, width=\paperwidth]{title.pdf}
+
 \newpage
 
 %% Abstract
@@ -28,8 +33,21 @@
 \section{Introducción}
 \subfile{sections/introduccion}
 
-\section{Conclusions and Futures Lines of Research}
-\subfile{sections/conclusion}
+\section{Descripción del Dataset}
+\subfile{sections/dataset}
+
+\section{Diseño XQuery}
+\subfile{sections/query}
+
+\section{Página Web}
+\subfile{sections/paginaWeb}
+
+\section{Integración de datos}
+\subfile{sections/datosPaginaWeb}
+
+\section{Grafo RDF}
+
+\subfile{sections/grafoRDF}
 
 \section{Conclusiones y Líneas Futuras}
 \subfile{sections/conclusiones}
@@ -41,10 +59,11 @@
 
 %% Apendices
 \begin{umaappendices}
-  \section{Manual de \\ Instalación}
+  \section{Manual de Instalación}
 
 \end{umaappendices}
 
 %% Back Cover
 \includepdf[noautoscale=true, width=\paperwidth]{backcover.pdf}
+
 \end{document}
