@@ -6,6 +6,8 @@ RDF es un lenguaje de modelado para describir recursos en la web. RDF permite mo
 
 \hfill
 
+\subsection{Clases RDF}
+
 Se ha tenido que desarrollar un mapa de clases que están relacionados mediante propiedades de datos. Definiendo las clases, operaciones:
 
 \hfill
@@ -29,6 +31,8 @@ El mapa se ha jerarquizado en torno al estudio que se esta realizando, de el par
 
 \newpage
 
+\subsection{Propiedades RDF}
+
 Para expresar atributos de las clases se han creado propiedades:
 
 \hfill
@@ -47,7 +51,44 @@ Estas propiedades complementan a ciertas clases, aportando información sobre el
 \begin{figure}[ht]
     \centering
     \includegraphics[scale=0.65]{images/reeee.png}
-    \caption{}
+    \caption{Propiedad enumerado}
     \label{reeee}
+\end{figure}
+
+La figura final, resultado del confeccionar un modelo con relaciones entre las clases (object properties), es el grafo RDF. 
+\begin{figure}[ht]
+    \centering
+    \includegraphics[scale=0.35]{images/rdf graph.png}
+    \caption{Grafo RDF}
+    \label{rdf graph}
+\end{figure}
+
+\subsection{Queries SPARQL}
+
+Para poder acceder al modelo .OWL, se ha creado un prefijo llamado sch que almacena el uri del proyecto. A través de el podremos consultar las propiedades de objetos, de clases y las propias clases.
+
+\subsubsection{Query 1}
+
+Muestra de el id de estudio, el nombre del país donde fue realizado, el nombre de la bacteria con el antibiótico que se testo y el porcentaje de éxito de los estudios por país dado:
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[scale=0.5]{images/sparql-1.PNG}
+    \caption{Muestra de los estudios de Bulgaria}
+    \label{spark1}
+\end{figure}
+
+ 
+
+\subsubsection{Query 2}
+
+La segunda query, muy similar a la primera, muestro los datos de todos los estudios ordenándolos ascendentemente por el valor de la resistencia que la bacteria tiene al antibiótico. Muestra los campos: nombre de la bacteria, nombre del antibiótico y el valor propio de la resistencia. 
+
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[scale=0.5]{images/sparql-2.PNG}
+    \caption{Resistencia de una bacteria a su antibiótico}
+    \label{spark2}
 \end{figure}
 \end{document}
